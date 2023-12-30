@@ -1,4 +1,4 @@
-.logo {
+/* .logo {
   width: 100px;
   height: 75px;
 }
@@ -55,8 +55,8 @@
 .user-card {
   border: 1px solid black;
   padding: 20px;
-}
+} */
 
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;

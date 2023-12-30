@@ -15,8 +15,8 @@ const RestaurantMenu = () => {
     const menu = temp.slice(2, temp.length - 2);
     console.log("menu is ", resInfo);
     return (
-      <div>
-        <h1>{name}</h1>
+      <div className="bg-red-500 text-4xl">
+        <h1 className="bg-gray-400">{name}</h1>
         <p>{cuisines.join(", ") + " - " + costForTwoMessage}</p>
         <h2>Menu</h2>
         <ul>

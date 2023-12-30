@@ -10,7 +10,7 @@ const LogInfo = () => {
     }
   }
   return (
-    <button className="log" onClick={changeLoginStatus}>
+    <button className="log m-4 p-4" onClick={changeLoginStatus}>
       {loginStatus}
     </button>
   );

@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 // import About from "./components/About";
 import AppLayout from "./components/AppLayout";
 import Body from "./components/Body";
+import ResMenu from "./components/ResMenu";
 import RestaurantMenu from "./components/RestaurantMenu";
 const About = lazy(() => import("./components/About"));
 
@@ -26,14 +27,20 @@ const AppRoute = createBrowserRouter([
       {
         path: "/about",
         element: (
-          <Suspense fallback={<div>Loading....</div>}>
+          <Suspense
+            fallback={
+              <div className="font-black text-9xl">
+                Loading..jssssssssssssssssssssssssssssssssssssssss..
+              </div>
+            }
+          >
             <About />
           </Suspense>
         ),
       },
       {
         path: "/restaurant/:resId",
-        element: <RestaurantMenu />,
+        element: <ResMenu />,
       },
     ],
     errorElement: <Error />,
