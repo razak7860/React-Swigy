@@ -9,6 +9,7 @@ import AppLayout from "./components/AppLayout";
 import Body from "./components/Body";
 import ResMenu from "./components/ResMenu";
 import RestaurantMenu from "./components/RestaurantMenu";
+import Cart from "./components/Cart";
 const About = lazy(() => import("./components/About"));
 
 const AppRoute = createBrowserRouter([
@@ -41,6 +42,10 @@ const AppRoute = createBrowserRouter([
       {
         path: "/restaurant/:resId",
         element: <ResMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,

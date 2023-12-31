@@ -18,8 +18,8 @@ const ResMenu = () => {
         c.card.card["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-
-  //   console.log(categories);
+  // console.log("categories are ");
+  // console.log(categories);
   return (
     <div>
       <div className="text-center">
@@ -28,9 +28,9 @@ const ResMenu = () => {
           {cuisines} - {costForTwoMessage}
         </p>
       </div>
-      {categories.map((category) => (
+      {categories.map((category, index) => (
         <RestaurantCategory
-          key={category?.card?.card?.ItemListItemList?.title}
+          key={category.card.card.title}
           data={category?.card?.card}
         />
       ))}

@@ -1,7 +1,13 @@
+import { addItem } from "../utils/cartSlice";
 import { RES_URL } from "../utils/constant";
+import { useDispatch, useSelector } from "react-redux";
 const ItemList = (props) => {
-  console.log("items is ", props.items);
+  // console.log("items is ", props.items);
   const { items } = props;
+  const dispatch = useDispatch();
+  const changeHandler = (item) => {
+    dispatch(addItem(item));
+  };
   return (
     <div>
       {items.map((item) => (
@@ -19,7 +25,10 @@ const ItemList = (props) => {
           </div>
           <div className="w-3/12  relative  ">
             <div className="absolute   ">
-              <button className="bg-black text-white rounded-lg mx-14 shadow-lg p-2">
+              <button
+                className="bg-black text-white rounded-lg mx-14 shadow-lg p-2"
+                onClick={() => changeHandler(item)}
+              >
                 Add +
               </button>
             </div>

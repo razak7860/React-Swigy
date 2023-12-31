@@ -1,11 +1,11 @@
 import RestaurantCard from "./RestaurantCard";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import fetchData from "../utils/fetchData";
 import { resList } from "../utils/mockdata";
 import fetchData from "../utils/fetchData";
 import { higherOrderFunction } from "./RestaurantCard";
 import UserContext from "../utils/UserContext";
+import Shimmer from "./Shimmer";
 const RestaurantContainer = () => {
   let [textValue, setTextValue] = useState("");
   const [resData, setResData] = useState([]);
@@ -78,7 +78,8 @@ const RestaurantContainer = () => {
         />
       </div>
       <div className="res-container flex flex-wrap my-5 ">
-        {/* {console.log("res data is: ", resData)} */}
+        {console.log("res data is: ", resData)}
+        {!resData.length && <Shimmer />}
         {filterData.map((data, i) => (
           <Link
             key={data.info.id}

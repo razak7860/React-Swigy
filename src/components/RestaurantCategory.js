@@ -3,7 +3,7 @@ import ItemList from "./ItemList";
 
 const RestaurantCategory = (props) => {
   const { title, itemCards } = props.data;
-  const [showItems, setShowItems] = useState(true);
+  const [showItems, setShowItems] = useState(false);
 
   //   console.log("items cards is ", props.data);
   const clickHandler = () => {
